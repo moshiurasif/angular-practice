@@ -1,0 +1,16 @@
+<p>child works!</p>
+<p>{{ num }}</p>
+<p>{{ title }}</p>
+<input type="text" name="" id="" #box />
+<button (click)="updateDataValue.emit(box.value)">Click me</button>
+<br /><br />
+<h3>Our Form: Template Driven Form</h3>
+<form #myForm="ngForm" (ngSubmit)="myFunc(myForm.value)">
+  <input type="text" ngModel name="user" id="" />
+  <br /><br />
+  <input type="email" ngModel name="email" id="" />
+  <br /><br />
+  <button>Submit</button>
+</form>
+<h3>{{ myPro.user }}</h3>
+<h3>{{ myPro.email }}</h3>

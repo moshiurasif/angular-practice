@@ -1,0 +1,19 @@
+<h2>Name: {{ users.name | uppercase }}</h2>
+<h2>Email: {{ users.email }}</h2>
+<input type="text" #box />
+<button (click)="anotherMethodEvent.emit(box.value)">click me</button>
+<h1 appNgEle>Reactive Form</h1>
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+  <input type="text" name="user" formControlName="user" />
+  <p *ngIf="user && user.invalid && user.touched">This Field is required</p>
+  <br />
+  <input type="text" name="email" formControlName="email" />
+  <p *ngIf="email && email.invalid && email.touched">This Field is required</p>
+  <br />
+  <input type="text" name="password" formControlName="password" />
+  <p *ngIf="password && password.invalid && password.touched">
+    This field is required and minimum 5 character
+  </p>
+  <br />
+  <button [disabled]="loginForm.invalid">submit</button>
+</form>
