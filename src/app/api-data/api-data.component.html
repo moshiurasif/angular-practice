@@ -1,0 +1,11 @@
+<div *ngFor="let room of usersData">
+  <h3>{{ room.name }}</h3>
+</div>
+
+<form #myform="ngForm" (ngSubmit)="myFormData(myform.value)">
+  <input type="text" name="name" ngModel />
+  <br />
+  <input type="text" name="capacity" ngModel />
+  <br />
+  <button>Submit</button>
+</form>

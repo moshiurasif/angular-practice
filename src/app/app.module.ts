@@ -6,19 +6,23 @@ import { AppComponent } from './app.component';
 import { ChildComponent } from './child/child.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { NgEleDirective } from './directive/ng-ele.directive';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiDataComponent } from './api-data/api-data.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChildComponent,
     UserDetailsComponent,
-    NgEleDirective
+    NgEleDirective,
+    ApiDataComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
